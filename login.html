@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN | V7 Estética Automotiva</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="script.js"></script>
+</head>
+<body class="min-h-screen">
+    <!-- Cabeçalho (Comum) -->
+    <header class="bg-gray-900 shadow-lg sticky top-0 z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-2xl font-bold text-white flex items-center">
+                    <div class="logo">
+                    <img src="imagens/logov72.png">
+                    </div>
+            <nav class="hidden md:flex space-x-8">
+            <a href="index.html" class="bg-gray-900 text-white px-3 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300">HOME</a>
+            <a href="servicos.html" class="bg-gray-900 text-white px-3 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300">SERVIÇOS</a>
+            <a href="portfolio.html" class="bg-gray-900 text-white px-3 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300">PORTFÓLIO</a>
+            <a href="agendamento.html" class="bg-yellow-500 text-gray-900 px-3 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition duration-300">AGENDAMENTO</a>
+            <a href="login.html" id="auth-link" class="bg-gray-900 text-white px-3 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300">Login/Cadastro</a>
+            </nav>
+                <button id="menu-button" class="md:hidden text-gray-300 hover:text-yellow-500 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-800">
+            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-yellow-500">HOME</a>
+                <a href="servicos.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-yellow-500">SERVIÇOS</a>
+                <a href="portfolio.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-yellow-500">PORTFÓLIO</a>
+                <a href="agendamento.html" class="block px-3 py-2 rounded-md text-base font-medium bg-yellow-500 text-gray-900 hover:bg-yellow-400">AGENDAMENTO</a>
+                <a href="login.html" id="mobile-auth-link" class="block px-3 py-2 rounded-md text-base font-medium text-yellow-500 hover:bg-gray-700">Login/Cadastro</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Container Principal do Conteúdo -->
+    <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        <h1 class="text-4xl font-extrabold text-center mb-12 text-white">Login de Cliente</h1>
+        <div class="max-w-lg mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl">
+            <form id="login-form">
+                <div class="space-y-6">
+                    <!-- E-mail -->
+                    <div>
+                        <label for="login-email" class="block text-sm font-medium text-gray-300 mb-1">E-mail</label>
+                        <input type="email" id="login-email" required class="w-full bg-gray-900 border border-gray-700 text-white p-3 rounded-lg focus:ring-yellow-500 focus:border-yellow-500">
+                    </div>
+
+                    <!-- Senha -->
+                    <div>
+                        <label for="login-password" class="block text-sm font-medium text-gray-300 mb-1">Senha</label>
+                        <input type="password" id="login-password" required class="w-full bg-gray-900 border border-gray-700 text-white p-3 rounded-lg focus:ring-yellow-500 focus:border-yellow-500">
+                    </div>
+                    
+                    <!-- Esqueceu a Senha? -->
+                    <div class="text-right">
+                        <a href="#" onclick="showMessageModal('Recuperação de Senha', 'Rota simulada: Um link de redefinição de senha seria enviado para o e-mail cadastrado.')" class="text-sm text-yellow-500 hover:text-yellow-400 font-semibold">Esqueci minha senha</a>
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-yellow-500 text-gray-900 font-bold py-3 px-4 rounded-lg text-lg hover:bg-yellow-400 transition duration-300 shadow-xl">
+                            Entrar
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="mt-6 text-center border-t border-gray-700 pt-6">
+                <p class="text-gray-400">Ainda não tem conta? 
+                    <a href="cadastro.html" class="text-yellow-500 hover:text-yellow-400 font-semibold">Cadastre-se aqui!</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé (Comum) -->
+    <footer class="bg-gray-900 text-gray-400 mt-12">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-yellow-500 mb-4">V7 Estética</h3>
+                    <p>Cuidado e excelência em cada detalhe do seu veículo.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Contato</h3>
+                    <ul>
+                        <li><a href="tel:+551199999999" class="hover:text-yellow-500">📞 (11) 99999-9999</a></li>
+                        <li><a href="mailto:contato@v7estetica.com" class="hover:text-yellow-500">📧 contato@v7estetica.com</a></li>
+                        <li>Rua da Estética, 123 - São Paulo/SP</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Redes Sociais</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-yellow-500"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                        <a href="#" class="hover:text-yellow-500"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                        <a href="#" onclick="showMessageModal('WhatsApp', 'Iniciando conversa no WhatsApp...')" class="hover:text-yellow-500"><i data-lucide="whatsapp" class="w-6 h-6"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-4 border-t border-gray-800 text-center">
+                <p>&copy; 2025 V7 Estética Automotiva. Todos os direitos reservados. Projeto Acadêmico.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
